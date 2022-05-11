@@ -1,0 +1,11 @@
+.c-survey {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  pad: 1rem;
+}
+
+.c-survey__actions {
+  display: flex;
+  gap: 1rem;
+}
