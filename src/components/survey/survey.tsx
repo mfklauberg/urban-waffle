@@ -46,7 +46,7 @@ interface SurveyProps {
 function Survey(props: SurveyProps): ReactElement {
   const [currentStep, setCurrentStep] = useState(0);
 
-  // @ts-ignore
+  // @ts-ignore: Ignoring empty initial data.
   const [surveyData, setSurveryData] = useState<SurveyData>({});
 
   const [isStateChecked, setIsStateChecked] = useState(false);
@@ -142,7 +142,7 @@ function Survey(props: SurveyProps): ReactElement {
           wrapperCol={{ span: 16 }}
           initialValues={surveyData}
         >
-          {/* @ts-ignore */}
+          {/* @ts-ignore: Ignoring to pass the current survey data to each Step. */}
           <StepContent data={surveyData} />
         </Form>
       </div>

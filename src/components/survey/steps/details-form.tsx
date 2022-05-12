@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
+import type { ReactElement } from 'react';
 
 import { Form, Radio, Select } from 'antd';
-import FormItem from 'antd/lib/form/FormItem';
 import { capitalize } from '../../../utils';
 
 const ageEighteenToHundred = [...Array(83)].map((_, index) => ({
@@ -13,7 +13,7 @@ const genders = [
   'female', 'male', 'other',
 ];
 
-function DetailsForm() {
+function DetailsForm(): ReactElement {
   return (
     <Fragment>
       <Form.Item label="Age" name="age" rules={[{ required: true, message: 'Please inform your age.' }]}>
@@ -26,7 +26,7 @@ function DetailsForm() {
         </Select>
       </Form.Item>
 
-      <FormItem label="Gender" name="gender" rules={[{ required: true, message: 'Please enter your gender.' }]}>
+      <Form.Item label="Gender" name="gender" rules={[{ required: true, message: 'Please enter your gender.' }]}>
         <Radio.Group>
           {
             genders.map((gender) => (
@@ -34,7 +34,7 @@ function DetailsForm() {
             ))
           }
         </Radio.Group>
-      </FormItem>
+      </Form.Item>
     </Fragment>
   );
 }

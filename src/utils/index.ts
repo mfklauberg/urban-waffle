@@ -3,7 +3,7 @@ function capitalize(value: string): string {
 }
 
 function formatList(values: string[]): string {
-  // @ts-ignore
+  // @ts-ignore: Ingoring because Intl.ListForm seems to be not within TypeScript's ESNEXT.
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
   const capitalizedValues = values.map((value) => capitalize(value));
 

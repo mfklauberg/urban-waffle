@@ -1,18 +1,18 @@
 import React, { Fragment } from 'react';
+import type { ReactElement } from 'react';
 
 import { Form, Input } from 'antd';
-import FormItem from 'antd/lib/form/FormItem';
 
-function IdentityForm() {
+function IdentityForm(): ReactElement {
   return (
     <Fragment>
       <Form.Item label="Name" name="name">
         <Input placeholder="Enter your name (optional)" />
       </Form.Item>
 
-      <FormItem label="Email" name="email">
+      <Form.Item label="Email" name="email">
         <Input placeholder="Enter your email (optional)" type="email" />
-      </FormItem>
+      </Form.Item>
     </Fragment>
   );
 }

@@ -1,4 +1,5 @@
-import React, { Fragment, ReactElement } from 'react';
+import React, { Fragment } from 'react';
+import type { ReactElement } from 'react';
 
 import { Checkbox, Col, Form, Input, Row } from 'antd';
 import { capitalize } from '../../../utils';
