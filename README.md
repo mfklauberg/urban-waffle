@@ -4,7 +4,7 @@ Embedded survey application, which is shown to the user based on information tha
 
 ### Dependencies
 
-Application built with [React](), using [Ant Design]() component library and [Vite]() for the application build and final library bundle.
+Application built with [React](https://reactjs.org), using [Ant Design](https://ant.design) component library and [Vite](https://vitejs.dev) for the application build and final library bundle.
 
 ### How to use
 
@@ -50,6 +50,6 @@ Then in the `index.html` file we modify it as the following:
 </html>
 ```
 
-Then, when running your application through your preferred static server, after waiting a few seconds, you should see the following modal:
+Then, when running your application through your preferred [static server](https://www.npmjs.com/package/serve), after waiting a few seconds, you should see the following modal:
 
-![Survey preview]('./docs/preview.png')
+![Survey preview](./docs/preview.png)
