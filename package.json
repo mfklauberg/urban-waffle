@@ -2,6 +2,15 @@
   "name": "@mfklauberg/urban-waffle",
   "private": true,
   "version": "1.0.0",
+  "files": ["dist"],
+  "main": "./dist/ys.umd.js",
+  "module": "./dist/ys.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ys.es.js",
+      "require": "./dist/ys.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
