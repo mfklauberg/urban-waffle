@@ -18,11 +18,11 @@ function FavoritesForm(): ReactElement {
       <Form.Item label="What are your favorite colors?" name="colors" rules={[{ required: true, message: 'Please select your favorite colors.' }]}>
         <Checkbox.Group>
           {
-            availableColors.map((colors) => (
-              <Row>
+            availableColors.map((colors, index) => (
+              <Row key={index}>
                 {
-                  colors.map((color) => (
-                    <Col span={8}>
+                  colors.map((color, index) => (
+                    <Col key={index} span={12}>
                       <Checkbox value={color} style={{ lineHeight: '32px' }}>
                         {capitalize(color)}
                       </Checkbox>

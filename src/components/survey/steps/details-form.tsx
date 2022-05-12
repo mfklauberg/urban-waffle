@@ -30,7 +30,7 @@ function DetailsForm() {
         <Radio.Group>
           {
             genders.map((gender) => (
-              <Radio value={gender}>{capitalize(gender)}</Radio>
+              <Radio key={gender} value={gender}>{capitalize(gender)}</Radio>
             ))
           }
         </Radio.Group>
