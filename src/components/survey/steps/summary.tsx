@@ -33,6 +33,10 @@ function Summary(props: SummaryProps): ReactElement {
   );
 }
 
+export type {
+  SummaryProps,
+};
+
 export {
   Summary,
 };

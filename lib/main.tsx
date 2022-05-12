@@ -9,9 +9,18 @@ import { Application, SurveyService } from '../src';
   }
 
   setTimeout(() => {
-    ReactDOM.createRoot(document.body).render(
+    const surveyContainer = document.createElement('div');
+    surveyContainer.setAttribute('id', 'ys-survey-container');
+
+    document.body.appendChild(surveyContainer);
+
+    const onFinish = (): void => {
+      document.body.removeChild(surveyContainer);
+    };
+
+    ReactDOM.createRoot(surveyContainer).render(
       <React.StrictMode>
-        <Application />
+        <Application onFinish={onFinish} />
       </React.StrictMode>
     );
   }, 2000);

@@ -39,7 +39,11 @@ const steps = [
   { id: 'summary', title: 'Summary', content: Summary, },
 ];
 
-function Survey(): ReactElement {
+interface SurveyProps {
+  onSubmit: () => void;
+}
+
+function Survey(props: SurveyProps): ReactElement {
   const [currentStep, setCurrentStep] = useState(0);
 
   // @ts-ignore
@@ -105,6 +109,8 @@ function Survey(): ReactElement {
     });
 
     SurveyService.setSurveyCompleted();
+
+    props.onSubmit();
   }
 
   const buttons = getButtons({
@@ -147,6 +153,10 @@ function Survey(): ReactElement {
     </div>
   );
 }
+
+export type {
+  SurveyProps,
+};
 
 export {
   Survey,
